@@ -9,4 +9,3 @@ if cipher == "rot":
             break
         except ValueError:
             print("thats not a number buddy")
-print("hi")
