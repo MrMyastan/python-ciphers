@@ -3,7 +3,9 @@ cipher = input()
 
 if cipher == "rot":
     print("How many rotations?")
-    rotations = int(input())
-    print(type(rotations))
-
-    
+    while True:
+        try:
+            rotations = int(input())
+            break
+        except ValueError:
+            print("thats not a number buddy")
