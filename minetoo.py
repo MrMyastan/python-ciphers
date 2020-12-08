@@ -1,5 +1,4 @@
-sup mf
-
 x = 1
 
-while x >
+while x > 0:
+    print("sup mf")
