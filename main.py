@@ -1,6 +1,6 @@
 import rot
 
-cipherDispatch = {"rot": rot.cipher}
+cipherDispatch = {"rot": rot.encode}
 
 print("What cipher would you like to use?")
 cipher = input()
