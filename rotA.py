@@ -44,5 +44,7 @@ def rot():
 
         encoded = encoded + encodedchar
         
-        
     print(encoded)
+
+if __name__ == "__main__":
+    rot()
