@@ -46,4 +46,3 @@ def rot():
         
         
     print(encoded)
-rot()

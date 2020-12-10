@@ -1,6 +1,7 @@
-import rot
+import rot_but_bad
+import rotA
 
-cipherDispatch = {"rot": rot.encode}
+cipherDispatch = {"rot": rot_but_bad.encode, "rotA": rotA.rot}
 
 print("What cipher would you like to use?")
 cipher = input()
