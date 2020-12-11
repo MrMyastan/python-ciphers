@@ -4,7 +4,7 @@
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 def rot():
-    endecrypt = input("Would you like to encrypt or decrypt?")
+    endecrypt = input("Would you like to encrypt or decrypt?\n")
     while endecrypt != "encrypt" and endecrypt != "decrypt":
         print("Please enter encrypt or decrypt")
         endecrypt = input()
