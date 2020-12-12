@@ -29,3 +29,6 @@ def encode():
         else:
             encoded = encoded + char
     print(encoded) 
+
+if __name__ == "main":
+    encode()
