@@ -1,3 +1,4 @@
+#Have to admit, while the list of lists was my idea, I didn't know how to do it in a way that worked so I had a little help with rows.append
 def tapcode():
     rows = []
     rows.append(['a','b','c','d','e'])

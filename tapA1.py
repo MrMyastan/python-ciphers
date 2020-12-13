@@ -1,3 +1,4 @@
+#Same thing as tapA except you can use dots along with numbers.
 def tapcode():
     rows = []
     rows.append(['a','b','c','d','e'])
