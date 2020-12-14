@@ -57,4 +57,5 @@ def tapcode():
             
     print(endecodedtext)
 
-tapcode()
+if __name__ == "__main__":
+    tapcode()
