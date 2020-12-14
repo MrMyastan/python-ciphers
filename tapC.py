@@ -2,7 +2,7 @@ def tapcode():
     text = input("What would you like to en/decode?\n")
     endecode = input("Would you like to encode or decode?\n")
     while endecode != "encode" and endecode != "decode":
-        print("Please enter encrypt or decrypt\n")
+        print("Please enter encode or decode\n")
         endecrypt = input()
     if endecode == "encode":
         encode(text)
