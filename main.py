@@ -1,8 +1,9 @@
 import rot_but_bad
 import rotA
 import rotC
+import tapC
 
-cipherDispatch = {"rot": rot_but_bad.encode, "rotA": rotA.rot, "rotC": rotC.rot}
+cipherDispatch = {"rot": rot_but_bad.encode, "rotA": rotA.rot, "rotC": rotC.rot, "tapC": tapC.tapcode}
 
 print("What cipher would you like to use?")
 cipher = input()
