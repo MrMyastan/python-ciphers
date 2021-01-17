@@ -1,5 +1,5 @@
 from rand_prime import generate_prime
-from math import gcd
+from math import gcd, ceil
 
 def init():
     print(keygen(int(input())))
@@ -25,6 +25,19 @@ def keygen(bit_length: int, e: int=65537, ) -> tuple:
     return ((e, n), (d, n))
 
 
+def i2osp(x: int) -> list:
+    octets = []
+    for i in range(ceil(x / 256)):
+        octets.insert(0, x & 255)
+        x >>= 8
+    return octets
+
+def os2ip(X: list) -> int:
+    XLen = len(X)
+    x = 0
+    for i in range(XLen):
+        x += X[i] * (256 ** (XLen - i - 1))
+    return x
 
 if __name__ == "__main__":
-    init()
+    print(os2ip([1, 144]))
