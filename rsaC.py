@@ -42,14 +42,14 @@ def keygen(bit_length: int, e: int=65537, ) -> tuple:
 
     return ((e, n), (d, n))
 
-def i2osp(x: int) -> list:
+def i2osp(x: int) -> bytes:
     octets = []
     for i in range(ceil(x / 256)):
         octets.insert(0, x & 255)
         x >>= 8
-    return octets
+    return bytes(octets)
 
-def os2ip(X: list) -> int:
+def os2ip(X: bytes) -> int:
     XLen = len(X)
     x = 0
     for i in range(XLen):
