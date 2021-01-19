@@ -1,8 +1,26 @@
 from rand_prime import generate_prime
 from math import gcd, ceil
 
-def init():
-    print(keygen(int(input())))
+def manager():
+    while True:
+        choice = input("Enter keygen to generate keys or transform to encrypt/decrypt: ")
+        if choice == "keygen" or choice == "transform":
+            break
+    if choice == "keygen":
+        while True:
+            try:
+                bits = int(input("How many bits long do you want your key to be? "))
+                break
+            except ValueError:
+                print("Please enter a number\n")
+        while True:
+            try:
+                e = int(input("What do you want your public exponent to be? (recommended is 65537) "))
+                break
+            except ValueError:
+                print("Please enter a number\n")
+        result = keygen(bits, e)
+        print(f"RSA Modulus, n: {result[0][1]}\nPublic Exponent, e: {result[0][0]}\nPrivate Exponent (keep this secret!), d: {result[1][0]}")
 
 def keygen(bit_length: int, e: int=65537, ) -> tuple:
     bits_per = bit_length // 2
@@ -24,7 +42,6 @@ def keygen(bit_length: int, e: int=65537, ) -> tuple:
 
     return ((e, n), (d, n))
 
-
 def i2osp(x: int) -> list:
     octets = []
     for i in range(ceil(x / 256)):
@@ -39,5 +56,6 @@ def os2ip(X: list) -> int:
         x += X[i] * (256 ** (XLen - i - 1))
     return x
 
+
 if __name__ == "__main__":
-    print(os2ip([1, 144]))
+    manager()
