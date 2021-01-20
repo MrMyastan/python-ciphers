@@ -1,3 +1,8 @@
+# https://eli.thegreenplace.net/2019/rsa-theory-and-implementation/#id9 this was immensely helpful in learning about rsa
+# https://tools.ietf.org/html/rfc8017#section-5.1.1 and this was also helpful for some implementation details
+# WARNING: DO NOT USE THIS FOR ANYTHING YOU NEED TO ACTUALLY BE SECURED
+# THIS WAS JUST A LEARNING PROJECT
+# I HAVENT EVEN IMPLEMENTED A PADDING SCHEME
 from rand_prime import generate_prime
 from math import gcd
 
