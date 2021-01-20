@@ -35,8 +35,7 @@ def keygen(bit_length: int, e: int=65537, ) -> tuple:
     phi = (p - 1) * (q - 1)
     
     if gcd(e, phi) != 1 or e % 2 != 1:
-        print("invalid e")
-        return ()
+        raise ValueError("Invalid e")
 
     d = pow(e, -1, phi)
 
@@ -44,7 +43,7 @@ def keygen(bit_length: int, e: int=65537, ) -> tuple:
 
 def i2osp(x: int) -> bytes:
     octets = []
-    for i in range(ceil(x / 256)):
+    while x:
         octets.insert(0, x & 255)
         x >>= 8
     return bytes(octets)
