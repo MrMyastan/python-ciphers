@@ -56,6 +56,14 @@ def os2ip(X: bytes) -> int:
         x += X[i] * (256 ** (XLen - i - 1))
     return x
 
+def get_int_input(prompt: str) -> int:
+    while True:
+        try:
+            response = int(input(prompt))
+            break
+        except ValueError:
+            print("Please enter a number\n")
+    return response
 
 if __name__ == "__main__":
     manager()
