@@ -1,5 +1,5 @@
 from rand_prime import generate_prime
-from math import gcd, ceil
+from math import gcd
 
 def manager():
     while True:
